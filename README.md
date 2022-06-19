@@ -21,3 +21,19 @@
     @Warmup(iterations = 5, time = 1)
 
 ```
+
+### Result
+
+```
+    # Warmup: n iterations, 10 s each   ------------------------------ 预热n个迭代，每个迭代10s
+    # Measurement: m iterations, 10 s each --------------------------- 正式测试m个迭代，每个迭代10s
+    # Timeout: 10 min per iteration ---------------------------------- 每个迭代的超时时间10min
+    # Threads: 1 thread, will synchronize iterations ----------------- 使用1个线程测试
+    # Benchmark mode: Throughput, ops/time --------------------------- 使用吞吐量作为测试指标
+    # Benchmark: com.bill.xxx ---------------------------------------- 本次迭代测试的目标方法名
+    # Parameters: (size = 10000) ------------------------------------- 本次迭代注入的参数值
+```
+
+### json to chart
+
+http://deepoove.com/jmh-visual-chart/

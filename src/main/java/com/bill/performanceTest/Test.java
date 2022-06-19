@@ -3,6 +3,7 @@ package com.bill.performanceTest;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
+import org.openjdk.jmh.results.format.ResultFormatType;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
@@ -15,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 2, time = 1)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
 @Fork(value = 2)
-@Threads(3)
+@Threads(12)
 @State(Scope.Thread)
 @OperationsPerInvocation
 public class Test {
@@ -48,7 +49,7 @@ public class Test {
         blackhole.consume(sb.toString());
     }
 
-    @Param({"1", "10", "100"})
+    @Param({"100", "1000", "10000"})
     private int n;
 
     @Setup
@@ -62,7 +63,8 @@ public class Test {
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
                 .include(Test.class.getSimpleName())
-//                .output("/Users/bill/backendProject/performanceTest/jmh-benchmark/aws-jdk-17")
+                .resultFormat(ResultFormatType.JSON)
+//                .output("/Users/bill/backendProject/performanceTest/jmh-benchmark/result.json")
                 .build();
         new Runner(opt).run();
     }

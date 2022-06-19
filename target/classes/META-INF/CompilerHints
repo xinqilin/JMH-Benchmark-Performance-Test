@@ -5,6 +5,6 @@ dontinline,*.*_ss_jmhStub
 dontinline,*.*_thrpt_jmhStub
 inline,com/bill/performanceTest/Test.setup
 inline,com/bill/performanceTest/Test.tearDown
+inline,com/bill/performanceTest/Test.test_N
 inline,com/bill/performanceTest/Test.test_NlogN
-inline,com/bill/performanceTest/Test.test_ON
-inline,com/bill/performanceTest/Test.test_OlogN
+inline,com/bill/performanceTest/Test.test_logN
