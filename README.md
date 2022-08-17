@@ -25,13 +25,13 @@
 ### Result
 
 ```
-    # Warmup: n iterations, 10 s each   ------------------------------ 预热n个迭代，每个迭代10s
-    # Measurement: m iterations, 10 s each --------------------------- 正式测试m个迭代，每个迭代10s
-    # Timeout: 10 min per iteration ---------------------------------- 每个迭代的超时时间10min
-    # Threads: 1 thread, will synchronize iterations ----------------- 使用1个线程测试
-    # Benchmark mode: Throughput, ops/time --------------------------- 使用吞吐量作为测试指标
-    # Benchmark: com.bill.xxx ---------------------------------------- 本次迭代测试的目标方法名
-    # Parameters: (size = 10000) ------------------------------------- 本次迭代注入的参数值
+    # Warmup: n iterations, m s each   ------------------------------  預熱 n 次, 每次 m 秒
+    # Measurement: n iterations, m s each --------------------------- 正式測試 m个迭代，每個 m 秒
+    # Timeout: n min per iteration ---------------------------------- testing/per timeout 時間 n min
+    # Threads: n thread, will synchronize iterations ----------------- 測試時開 n 個 thread
+    # Benchmark mode: Throughput, ops/time --------------------------- 使用 xxx mode (Throughput, Averagetime)
+    # Benchmark: com.bill.xxx ---------------------------------------- 測試時的 package
+    # Parameters: (size = 10000) ------------------------------------- 測試時 n 值
 ```
 
 ### json to chart
